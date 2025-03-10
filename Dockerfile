@@ -1,6 +1,6 @@
 # Dockerfile
 # Stage 1: Build the application using Maven
-FROM infotechsoft/maven:3.8.6-openjdk-17 AS build
+FROM infotechsoft/maven:3.8.6-openjdk-21 AS build
 WORKDIR /app
 
 # Copy pom.xml and download dependencies
