@@ -5,10 +5,10 @@ services:
     ports:
       - "8085:8085"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://192.168.5.158:5435/fullstacksampledb?currentSchema=user_app
+      SPRING_DATASOURCE_URL: postgresql://192.168.5.158:5435/fullstacksampledb
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: root
-      SPRING_JPA_HIBERNATE_DDL-AUTO: update
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
     depends_on:
       db:
         condition: service_healthy
