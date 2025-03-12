@@ -6,7 +6,7 @@ services:
     ports:
       - "8085:8085"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5435/fullstacksampledb
+      SPRING_DATASOURCE_URL: jdbc:postgresql://host.docker.internal:5435/fullstacksampledb
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: root
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
