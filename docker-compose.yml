@@ -2,10 +2,11 @@
 services:
   app:
     build: .
+    container_name: fullstackapp
     ports:
       - "8085:8085"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://192.168.5.158:5435/fullstacksampledb
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5435/fullstacksampledb
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: root
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
@@ -15,6 +16,7 @@ services:
 
   db:
     image: postgres:16-alpine
+    container_name: postgres-db
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: root
